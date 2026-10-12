@@ -3,8 +3,9 @@ import './globals.css';
 import ClientLayoutWrapper from '@/components/ClientLayoutWrapper';
 
 export const metadata: Metadata = {
-  title: 'IndiNiger BizHub — Global Business Marketplace | One Roof. Every Business. Global Opportunities.',
-  description: 'Global business marketplace connecting 62 business categories and 57 countries. Discover manufacturers, suppliers, investors, and cross-border trade opportunities.',
+  metadataBase: new URL('https://indiniger-bizhub.vercel.app'),
+  title: 'IndiNiger BizHub — Global Business Marketplace',
+  description: 'One Global Platform. Endless Business Possibilities. Discover 62 industry sectors across 57 countries. Direct WhatsApp connect: +91 99901 55699.',
   keywords: [
     'IndiNiger BizHub',
     'Global Business Marketplace',
@@ -20,9 +21,26 @@ export const metadata: Metadata = {
   authors: [{ name: 'Kumud Gameti' }, { name: 'IndiNiger BizHub Secretariat' }],
   openGraph: {
     title: 'IndiNiger BizHub — Global Business Marketplace',
-    description: 'One Roof. Every Business. Global Opportunities. Connecting multi-sector businesses across 57 countries.',
+    description: 'One Global Platform. Endless Business Possibilities. Connecting 62 industry categories across 57 countries with direct WhatsApp lead routing.',
+    url: 'https://indiniger-bizhub.vercel.app',
     siteName: 'IndiNiger BizHub',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'IndiNiger BizHub — Global Business Marketplace',
+        type: 'image/jpeg',
+      },
+    ],
+    locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'IndiNiger BizHub — Global Business Marketplace',
+    description: 'One Global Platform. Endless Business Possibilities. Connect with 57 global hubs.',
+    images: ['/og-image.jpg'],
   },
   icons: {
     icon: [
