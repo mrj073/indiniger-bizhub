@@ -16,7 +16,7 @@ import {
   Phone,
 } from 'lucide-react';
 import { useModals } from '@/components/ClientLayoutWrapper';
-import { KUMUD_WHATSAPP_NUMBER } from '@/lib/whatsapp';
+import { KUMUD_WHATSAPP_NUMBER, AKOSA_WHATSAPP_NUMBER } from '@/lib/whatsapp';
 
 export default function AboutPage() {
   const { openEnquiryModal } = useModals();
@@ -49,86 +49,141 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Founder & Leadership Spotlight */}
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-md">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-5">
-              <div className="rounded-3xl p-1 bg-gradient-to-br from-blue-600 via-indigo-600 to-amber-500 shadow-xl overflow-hidden">
-                <div className="bg-gradient-to-b from-slate-900 to-slate-950 rounded-[22px] p-6 text-center space-y-4 text-white">
+        {/* Co-Founders & Bilateral Leadership Spotlight */}
+        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md space-y-8">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block">
+              BILATERAL EXECUTIVE LEADERSHIP
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-black text-slate-900 leading-snug">
+              Visionary Leadership Connecting India & Nigeria
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Founded on direct cooperation and frictionless global trade, IndiNiger BizHub is co-directed by leadership in India and West Africa to ensure seamless bilateral trade execution.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-2">
+            {/* Founder 1: Kumud Gameti */}
+            <div className="rounded-3xl p-1 bg-gradient-to-br from-blue-600 via-indigo-600 to-amber-500 shadow-xl overflow-hidden flex flex-col">
+              <div className="bg-gradient-to-b from-slate-900 to-slate-950 rounded-[22px] p-6 text-center space-y-4 text-white flex-1 flex flex-col justify-between">
+                <div>
                   {/* Portrait with official emblem badge */}
-                  <div className="relative mx-auto w-48 h-56 sm:w-56 sm:h-64 rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-400/80 bg-slate-900 group">
+                  <div className="relative mx-auto w-48 h-56 sm:w-52 sm:h-60 rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-400/80 bg-slate-900 group mb-4">
                     <img
                       src="/kumud-gameti.jpg"
-                      alt="Kumud Gameti — Founder & Business Contact"
+                      alt="Kumud Gameti — Founder & Director"
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                     />
-                    {/* Floating official logo badge at corner */}
                     <div className="absolute bottom-2.5 right-2.5 w-10 h-10 rounded-xl overflow-hidden border-2 border-amber-400 bg-slate-950 p-0.5 shadow-xl">
                       <img src="/logo.jpg" alt="Official Logo" className="w-full h-full object-cover rounded-lg" />
                     </div>
                   </div>
 
-                  <div>
-                    <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-400/20 text-amber-300 text-[11px] font-bold border border-amber-400/30 mb-2">
-                      <Sparkles className="w-3 h-3 text-amber-300" />
-                      <span>FOUNDER & BUSINESS CONTACT</span>
-                    </div>
-                    <h3 className="text-2xl font-black text-white">Kumud Gameti</h3>
-                    <p className="text-xs text-slate-300 mt-1">
-                      Strategic Trade Leadership & Global Vision
-                    </p>
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 text-[11px] font-bold border border-amber-400/30 mb-2">
+                    <Sparkles className="w-3 h-3 text-amber-300" />
+                    <span>FOUNDER & DIRECTOR &middot; 🇮🇳 INDIA HUB</span>
                   </div>
+                  <h3 className="text-2xl font-black text-white">Kumud Gameti</h3>
+                  <p className="text-xs text-slate-300 mt-1">
+                    Strategic Trade Leadership & Global Vision
+                  </p>
+                </div>
 
-                  <div className="p-3 bg-white/10 rounded-xl border border-white/10 text-xs text-blue-100 leading-relaxed text-left">
-                    Guiding the strategic vision to unify 62 commercial categories and facilitate trade corridors across 57 countries.
+                <div className="space-y-3 pt-2">
+                  <div className="p-3.5 bg-white/10 rounded-xl border border-white/10 text-xs text-blue-100 leading-relaxed text-left">
+                    Directing the strategic vision to unify 62 commercial categories and anchor India’s trade corridors across 57 countries.
                   </div>
 
                   <a
                     href={`https://wa.me/${KUMUD_WHATSAPP_NUMBER}`}
                     target="_top"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-all active:scale-95"
+                    className="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-all active:scale-95"
                   >
                     <Phone className="w-4 h-4 shrink-0" />
-                    <span>WhatsApp Desk:</span>
+                    <span>WhatsApp (India Desk):</span>
                     <span className="font-mono font-bold whitespace-nowrap">+91 99901 55699</span>
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="lg:col-span-7 space-y-5">
-              <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block">
-                LEADERSHIP & VISION STATEMENT
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 leading-snug">
-                One Platform Connecting Entrepreneurs, Suppliers, and Global Investors
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                As founder and principal coordinator, <strong>Kumud Gameti</strong> identified the friction that mid-market enterprises face when expanding into cross-border corridors—particularly between the manufacturing might of India, the natural resource and agriculture potential of Niger and West Africa, and wider international consumer centers.
-              </p>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                IndiNiger BizHub serves as the central digital hub where business owners do not need to navigate disjointed directories or obscure middlemen. By consolidating 62 categories and 57 country corridors, the platform enables direct business relationships.
-              </p>
+            {/* Founder 2: Akosa Chidozie Okwuchukwu */}
+            <div className="rounded-3xl p-1 bg-gradient-to-br from-emerald-600 via-teal-600 to-amber-500 shadow-xl overflow-hidden flex flex-col">
+              <div className="bg-gradient-to-b from-slate-900 to-slate-950 rounded-[22px] p-6 text-center space-y-4 text-white flex-1 flex flex-col justify-between">
+                <div>
+                  {/* Portrait with official emblem badge */}
+                  <div className="relative mx-auto w-48 h-56 sm:w-52 sm:h-60 rounded-2xl overflow-hidden shadow-2xl border-2 border-emerald-400/80 bg-slate-900 group mb-4">
+                    <img
+                      src="/akosa-chidozie.jpg"
+                      alt="AKOSA CHIDOZIE OKWUCHUKWU — Co-Founder & Director"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute bottom-2.5 right-2.5 w-10 h-10 rounded-xl overflow-hidden border-2 border-emerald-400 bg-slate-950 p-0.5 shadow-xl">
+                      <img src="/logo.jpg" alt="Official Logo" className="w-full h-full object-cover rounded-lg" />
+                    </div>
+                  </div>
 
-              <div className="pt-2 flex flex-wrap gap-4">
-                <button
-                  onClick={() => openEnquiryModal({
-                    title: 'Strategic Consultation with Secretariat',
-                    subtitle: 'Submit an executive proposal to Kumud Gameti.',
-                    type: 'general_contact',
-                  })}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl text-xs font-bold shadow-md cursor-pointer transition-all"
-                >
-                  Request Consultation
-                </button>
-                <Link
-                  href="/contact"
-                  className="px-6 py-3 rounded-xl border-2 border-slate-200 text-slate-700 hover:text-slate-900 hover:bg-slate-100 text-xs font-bold transition-all"
-                >
-                  View Contact Desk
-                </Link>
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-400/20 text-emerald-300 text-[11px] font-bold border border-emerald-400/30 mb-2">
+                    <Sparkles className="w-3 h-3 text-emerald-300" />
+                    <span>CO-FOUNDER & DIRECTOR &middot; 🇳🇬 NIGERIA HUB</span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+                    Akosa Chidozie Okwuchukwu
+                  </h3>
+                  <p className="text-xs text-slate-300 mt-1">
+                    African Trade Expansion & Operations Leadership
+                  </p>
+                </div>
+
+                <div className="space-y-3 pt-2">
+                  <div className="p-3.5 bg-white/10 rounded-xl border border-white/10 text-xs text-emerald-100 leading-relaxed text-left">
+                    Spearheading West African market integrations, cross-border corporate governance, and direct trade facilitation across Nigeria and beyond.
+                  </div>
+
+                  <a
+                    href={`https://wa.me/${AKOSA_WHATSAPP_NUMBER}`}
+                    target="_top"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-all active:scale-95"
+                  >
+                    <Phone className="w-4 h-4 shrink-0" />
+                    <span>WhatsApp (Nigeria Desk):</span>
+                    <span className="font-mono font-bold whitespace-nowrap">+234 916 535 5448</span>
+                  </a>
+                </div>
               </div>
+            </div>
+          </div>
+
+          {/* Statement Box */}
+          <div className="p-6 sm:p-8 bg-slate-50 rounded-3xl border border-slate-200 space-y-4">
+            <h3 className="text-xl font-black text-slate-900">
+              One Platform Connecting Entrepreneurs, Suppliers, and Global Investors
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Together, <strong>Kumud Gameti</strong> and <strong>Akosa Chidozie Okwuchukwu</strong> established IndiNiger BizHub to eradicate friction in international commerce. By linking India’s manufacturing, pharmaceutical, technology, and engineering capabilities with the dynamic agricultural and mineral wealth of Nigeria, West Africa, and 57 emerging economies, IndiNiger BizHub offers a direct, verified highway for business growth.
+            </p>
+            <div className="pt-2 flex flex-wrap gap-4">
+              <button
+                onClick={() =>
+                  openEnquiryModal({
+                    title: 'Strategic Consultation with Secretariat',
+                    subtitle: 'Submit an executive proposal to the Co-Founders.',
+                    type: 'general_contact',
+                  })
+                }
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl text-xs font-bold shadow-md cursor-pointer transition-all"
+              >
+                Request Strategic Consultation
+              </button>
+              <Link
+                href="/contact"
+                className="px-6 py-3 rounded-xl border-2 border-slate-200 text-slate-700 hover:text-slate-900 hover:bg-slate-100 text-xs font-bold transition-all"
+              >
+                View Regional Desks
+              </Link>
             </div>
           </div>
         </div>

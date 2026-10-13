@@ -15,7 +15,7 @@ import {
 import { CATEGORIES_DATA } from '@/data/categories';
 import { COUNTRIES_DATA } from '@/data/countries';
 import { saveEnquiry } from '@/lib/demoStorage';
-import { dispatchToWhatsApp } from '@/lib/whatsapp';
+import { dispatchToWhatsApp, KUMUD_WHATSAPP_NUMBER, AKOSA_WHATSAPP_NUMBER } from '@/lib/whatsapp';
 import { useModals } from '@/components/ClientLayoutWrapper';
 import confetti from 'canvas-confetti';
 
@@ -117,64 +117,106 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-4 text-xs text-slate-700">
-              {/* Founder Contact */}
-              <div className="flex items-start gap-3.5 p-3.5 bg-slate-50 rounded-2xl border border-slate-200">
-                <div className="w-12 h-12 rounded-xl overflow-hidden border border-amber-400 bg-slate-900 shadow-sm shrink-0">
-                  <img src="/kumud-gameti.jpg" alt="Kumud Gameti" className="w-full h-full object-cover object-top" />
+              {/* Co-Founders Contacts */}
+              <div className="space-y-3">
+                {/* Director 1: Kumud Gameti */}
+                <div className="flex items-start gap-3.5 p-3.5 bg-slate-50 rounded-2xl border border-slate-200">
+                  <div className="w-12 h-14 rounded-xl overflow-hidden border border-amber-400 bg-slate-900 shadow-sm shrink-0">
+                    <img src="/kumud-gameti.jpg" alt="Kumud Gameti" className="w-full h-full object-cover object-top" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <span className="text-amber-700 block text-[10px] font-extrabold uppercase tracking-wider">
+                      🇮🇳 FOUNDER & DIRECTOR &middot; INDIA HUB
+                    </span>
+                    <span className="font-black text-slate-900 text-sm block">Kumud Gameti</span>
+                    <p className="text-[11px] text-slate-500 mt-0.5">
+                      Strategic Trade Leadership & Global Expansion
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <span className="text-slate-400 block text-[11px] font-bold">FOUNDER & BUSINESS CONTACT</span>
-                  <span className="font-black text-slate-900 text-sm">Kumud Gameti</span>
-                  <p className="text-[11px] text-slate-500 mt-0.5">
-                    Strategic Trade Leadership & Global Expansion
-                  </p>
+
+                {/* Director 2: Akosa Chidozie Okwuchukwu */}
+                <div className="flex items-start gap-3.5 p-3.5 bg-slate-50 rounded-2xl border border-slate-200">
+                  <div className="w-12 h-14 rounded-xl overflow-hidden border border-emerald-400 bg-slate-900 shadow-sm shrink-0">
+                    <img src="/akosa-chidozie.jpg" alt="Akosa Chidozie Okwuchukwu" className="w-full h-full object-cover object-top" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <span className="text-emerald-700 block text-[10px] font-extrabold uppercase tracking-wider">
+                      🇳🇬 CO-FOUNDER & DIRECTOR &middot; NIGERIA HUB
+                    </span>
+                    <span className="font-black text-slate-900 text-sm block">Akosa Chidozie Okwuchukwu</span>
+                    <p className="text-[11px] text-slate-500 mt-0.5">
+                      African Trade Expansion & Regional Operations
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Single Official WhatsApp Helpline Card — Guaranteed Zero-Wrap */}
-              <div className="p-4 sm:p-5 bg-gradient-to-br from-emerald-50 via-white to-teal-50 rounded-2xl border-2 border-emerald-400 shadow-sm space-y-3">
-                <div className="flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-xs">
-                      <Phone className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <span className="text-[10px] font-bold text-emerald-800 uppercase tracking-wider block">
-                        EXECUTIVE WHATSAPP DESK
-                      </span>
-                      <span className="text-[11px] text-slate-500 font-medium">Kumud Gameti (Founder Line)</span>
-                    </div>
+              {/* Bilateral WhatsApp Direct Desks */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                {/* India WhatsApp */}
+                <div className="p-3.5 bg-gradient-to-br from-emerald-50 via-white to-teal-50 rounded-2xl border-2 border-emerald-400 shadow-xs space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold text-emerald-800 uppercase tracking-wider">
+                      🇮🇳 INDIA WHATSAPP
+                    </span>
+                    <span className="text-[9px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold">
+                      Online
+                    </span>
                   </div>
-                  <span className="text-[10px] bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded-full font-bold border border-emerald-200 shrink-0">
-                    Online
-                  </span>
-                </div>
-
-                <div className="pt-1">
                   <a
-                    href="https://wa.me/919990155699"
+                    href={`https://wa.me/${KUMUD_WHATSAPP_NUMBER}`}
                     target="_top"
                     rel="noopener noreferrer"
                     className="block group"
                   >
-                    <span className="font-mono font-black text-xl sm:text-2xl text-slate-950 tracking-tight whitespace-nowrap block group-hover:text-emerald-600 transition-colors">
+                    <span className="font-mono font-black text-base text-slate-950 tracking-tight whitespace-nowrap block group-hover:text-emerald-600 transition-colors">
                       +91 99901 55699
                     </span>
+                    <span className="text-[10px] text-slate-500 block">Kumud Gameti</span>
                   </a>
-                  <p className="text-[11px] text-slate-500 mt-0.5">
-                    Direct instant query response across all 57 corridors
-                  </p>
+                  <a
+                    href={`https://wa.me/${KUMUD_WHATSAPP_NUMBER}`}
+                    target="_top"
+                    rel="noopener noreferrer"
+                    className="w-full py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition-all active:scale-95"
+                  >
+                    <Phone className="w-3.5 h-3.5" />
+                    <span>Chat India</span>
+                  </a>
                 </div>
 
-                <a
-                  href="https://wa.me/919990155699"
-                  target="_top"
-                  rel="noopener noreferrer"
-                  className="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md transition-all active:scale-95"
-                >
-                  <Phone className="w-3.5 h-3.5" />
-                  <span>Click to Chat on WhatsApp</span>
-                </a>
+                {/* Nigeria WhatsApp */}
+                <div className="p-3.5 bg-gradient-to-br from-teal-50 via-white to-emerald-50 rounded-2xl border-2 border-teal-400 shadow-xs space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold text-teal-800 uppercase tracking-wider">
+                      🇳🇬 NIGERIA WHATSAPP
+                    </span>
+                    <span className="text-[9px] bg-teal-100 text-teal-800 px-2 py-0.5 rounded-full font-bold">
+                      Online
+                    </span>
+                  </div>
+                  <a
+                    href={`https://wa.me/${AKOSA_WHATSAPP_NUMBER}`}
+                    target="_top"
+                    rel="noopener noreferrer"
+                    className="block group"
+                  >
+                    <span className="font-mono font-black text-base text-slate-950 tracking-tight whitespace-nowrap block group-hover:text-teal-600 transition-colors">
+                      +234 916 535 5448
+                    </span>
+                    <span className="text-[10px] text-slate-500 block">Akosa Chidozie</span>
+                  </a>
+                  <a
+                    href={`https://wa.me/${AKOSA_WHATSAPP_NUMBER}`}
+                    target="_top"
+                    rel="noopener noreferrer"
+                    className="w-full py-2 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition-all active:scale-95"
+                  >
+                    <Phone className="w-3.5 h-3.5" />
+                    <span>Chat Nigeria</span>
+                  </a>
+                </div>
               </div>
 
               {/* Regional Hubs */}

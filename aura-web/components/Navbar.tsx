@@ -13,7 +13,7 @@ import {
   Phone,
 } from 'lucide-react';
 import { CATEGORIES_DATA } from '@/data/categories';
-import { KUMUD_WHATSAPP_NUMBER } from '@/lib/whatsapp';
+import { KUMUD_WHATSAPP_NUMBER, AKOSA_WHATSAPP_NUMBER } from '@/lib/whatsapp';
 
 interface NavbarProps {
   onOpenJoinModal: () => void;
@@ -253,7 +253,7 @@ export default function Navbar({ onOpenJoinModal }: NavbarProps) {
             ))}
 
             <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
-              {/* WhatsApp direct line card in mobile menu */}
+              {/* WhatsApp direct lines in mobile menu */}
               <a
                 href={`https://wa.me/${KUMUD_WHATSAPP_NUMBER}`}
                 target="_top"
@@ -263,10 +263,26 @@ export default function Navbar({ onOpenJoinModal }: NavbarProps) {
               >
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>WhatsApp Kumud Gameti</span>
+                  <span>🇮🇳 Kumud Gameti (India)</span>
                 </div>
                 <span className="font-mono text-[11px] bg-emerald-200/80 px-2 py-0.5 rounded-md whitespace-nowrap">
                   +91 99901 55699
+                </span>
+              </a>
+
+              <a
+                href={`https://wa.me/${AKOSA_WHATSAPP_NUMBER}`}
+                target="_top"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full py-2.5 px-3 rounded-xl bg-teal-50 border border-teal-300 text-teal-800 text-xs font-bold flex items-center justify-between"
+              >
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-teal-600 shrink-0" />
+                  <span>🇳🇬 Akosa Chidozie (Nigeria)</span>
+                </div>
+                <span className="font-mono text-[11px] bg-teal-200/80 px-2 py-0.5 rounded-md whitespace-nowrap">
+                  +234 916 535 5448
                 </span>
               </a>
 

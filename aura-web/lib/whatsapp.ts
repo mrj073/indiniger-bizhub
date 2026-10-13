@@ -10,7 +10,29 @@ export interface WhatsAppLeadPayload {
   type?: string;
 }
 
-export const KUMUD_WHATSAPP_NUMBER = '919990155699'; // +91 99901 55699
+export const KUMUD_WHATSAPP_NUMBER = '919990155699'; // +91 99901 55699 (India Hub — Kumud Gameti)
+export const AKOSA_WHATSAPP_NUMBER = '2349165355448'; // +234 916 535 5448 (Nigeria Hub — Akosa Chidozie Okwuchukwu)
+
+export const DIRECTORS = {
+  kumud: {
+    name: 'Kumud Gameti',
+    role: 'Founder & Director',
+    hub: 'India & Global Secretariat',
+    phoneFormatted: '+91 99901 55699',
+    whatsappNumber: KUMUD_WHATSAPP_NUMBER,
+    flag: '🇮🇳',
+    image: '/kumud-gameti.jpg',
+  },
+  akosa: {
+    name: 'Akosa Chidozie Okwuchukwu',
+    role: 'Co-Founder & Director',
+    hub: 'Nigeria & West Africa Hub',
+    phoneFormatted: '+234 916 535 5448',
+    whatsappNumber: AKOSA_WHATSAPP_NUMBER,
+    flag: '🇳🇬',
+    image: '/akosa-chidozie.jpg',
+  },
+} as const;
 
 export function formatWhatsAppMessage(lead: WhatsAppLeadPayload): string {
   const parts: string[] = [
@@ -55,4 +77,15 @@ export function dispatchToWhatsApp(lead: WhatsAppLeadPayload): string {
     }
   }
   return url;
+}
+
+export function generateDirectorWhatsAppUrl(
+  directorKey: 'kumud' | 'akosa',
+  customMessage?: string
+): string {
+  const director = DIRECTORS[directorKey];
+  const msg =
+    customMessage ||
+    `Hello ${director.name}, I am reaching out through IndiNiger BizHub to discuss business opportunities with your ${director.hub}.`;
+  return `https://wa.me/${director.whatsappNumber}?text=${encodeURIComponent(msg)}`;
 }

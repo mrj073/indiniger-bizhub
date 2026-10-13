@@ -12,7 +12,7 @@ import {
   CheckCircle2,
   X,
 } from 'lucide-react';
-import { KUMUD_WHATSAPP_NUMBER } from '@/lib/whatsapp';
+import { KUMUD_WHATSAPP_NUMBER, AKOSA_WHATSAPP_NUMBER } from '@/lib/whatsapp';
 
 interface FooterProps {
   onOpenJoinModal?: () => void;
@@ -213,12 +213,12 @@ export default function Footer({ onOpenJoinModal }: FooterProps) {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4 flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-amber-400" />
-              <span>Direct WhatsApp Desk</span>
+              <span>Direct WhatsApp Desks</span>
             </h4>
             <ul className="space-y-3 text-xs text-slate-300">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                <span>Global Secretariat: New Delhi & Niamey Hub Corridors</span>
+                <span>Global Secretariat: New Delhi & Abuja / Niamey Corridors</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
@@ -228,8 +228,20 @@ export default function Footer({ onOpenJoinModal }: FooterProps) {
                   rel="noopener noreferrer"
                   className="hover:text-emerald-400 transition-colors flex items-center gap-1.5 flex-wrap sm:flex-nowrap"
                 >
-                  <span className="font-bold text-white">Kumud Gameti:</span>
+                  <span className="font-bold text-white">🇮🇳 Kumud Gameti:</span>
                   <span className="text-emerald-400 font-bold font-mono whitespace-nowrap">+91 99901 55699</span>
+                </a>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <Phone className="w-4 h-4 text-teal-400 shrink-0" />
+                <a
+                  href={`https://wa.me/${AKOSA_WHATSAPP_NUMBER}`}
+                  target="_top"
+                  rel="noopener noreferrer"
+                  className="hover:text-teal-400 transition-colors flex items-center gap-1.5 flex-wrap sm:flex-nowrap"
+                >
+                  <span className="font-bold text-white">🇳🇬 Akosa Chidozie:</span>
+                  <span className="text-teal-400 font-bold font-mono whitespace-nowrap">+234 916 535 5448</span>
                 </a>
               </li>
               <li className="pt-2">
@@ -248,7 +260,7 @@ export default function Footer({ onOpenJoinModal }: FooterProps) {
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>
-            &copy; {new Date().getFullYear()} IndiNiger BizHub. All rights reserved. Founder: Kumud Gameti.
+            &copy; {new Date().getFullYear()} IndiNiger BizHub. All rights reserved. Co-Founders: Kumud Gameti &amp; Akosa Chidozie Okwuchukwu.
           </p>
           <div className="flex items-center gap-6">
             <button

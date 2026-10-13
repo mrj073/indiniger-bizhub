@@ -40,7 +40,7 @@ import { COUNTRIES_DATA } from '@/data/countries';
 import { SAMPLE_EVENTS } from '@/data/events';
 import { useModals } from '@/components/ClientLayoutWrapper';
 import { saveEnquiry } from '@/lib/demoStorage';
-import { dispatchToWhatsApp, KUMUD_WHATSAPP_NUMBER } from '@/lib/whatsapp';
+import { dispatchToWhatsApp, KUMUD_WHATSAPP_NUMBER, AKOSA_WHATSAPP_NUMBER } from '@/lib/whatsapp';
 import confetti from 'canvas-confetti';
 
 // Helper to render icon by name
@@ -227,8 +227,8 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              {/* Direct Founder WhatsApp Quick Badge */}
-              <div className="pt-2 flex items-center gap-3">
+              {/* Direct Bilateral WhatsApp Quick Badges */}
+              <div className="pt-2 flex flex-wrap items-center gap-3">
                 <a
                   href={`https://wa.me/${KUMUD_WHATSAPP_NUMBER}`}
                   target="_top"
@@ -236,9 +236,21 @@ export default function HomePage() {
                   className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-xs font-semibold hover:bg-emerald-500/30 transition-colors"
                 >
                   <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span>WhatsApp Desk:</span>
+                  <span>🇮🇳 India Desk:</span>
                   <span className="font-mono font-bold text-white whitespace-nowrap">+91 99901 55699</span>
                   <span className="text-emerald-300 hidden sm:inline">(Kumud Gameti)</span>
+                </a>
+
+                <a
+                  href={`https://wa.me/${AKOSA_WHATSAPP_NUMBER}`}
+                  target="_top"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-teal-500/20 border border-teal-400/40 text-teal-300 text-xs font-semibold hover:bg-teal-500/30 transition-colors"
+                >
+                  <Phone className="w-3.5 h-3.5 text-teal-400 shrink-0" />
+                  <span>🇳🇬 Nigeria Desk:</span>
+                  <span className="font-mono font-bold text-white whitespace-nowrap">+234 916 535 5448</span>
+                  <span className="text-teal-300 hidden sm:inline">(Akosa Chidozie)</span>
                 </a>
               </div>
 
@@ -1012,66 +1024,99 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* SECTION K: ABOUT INDINIGER BIZHUB & KUMUD GAMETI */}
+      {/* SECTION K: BILATERAL LEADERSHIP & CO-FOUNDERS */}
       {/* ============================================================ */}
       <section className="py-20 bg-slate-50 border-b border-slate-200" id="about">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-950 rounded-3xl p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden border border-slate-800">
-            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 relative z-10">
-              <div className="max-w-2xl space-y-6">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/20 text-amber-300 text-xs font-bold border border-amber-400/30">
-                  <Award className="w-3.5 h-3.5 text-amber-300" />
-                  <span>FOUNDER & BUSINESS LEADERSHIP</span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          <div className="bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-950 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden border border-slate-800">
+            <div className="max-w-3xl space-y-4 relative z-10">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/20 text-amber-300 text-xs font-bold border border-amber-400/30">
+                <Award className="w-3.5 h-3.5 text-amber-300" />
+                <span>EXECUTIVE BILATERAL LEADERSHIP</span>
+              </div>
+
+              <h2 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
+                Bringing Continents Together.{' '}
+                <span className="bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 bg-clip-text text-transparent">
+                  Opening Doors to Global Opportunities.
+                </span>
+              </h2>
+
+              <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
+                IndiNiger BizHub was established by <strong>Kumud Gameti</strong> and <strong>Akosa Chidozie Okwuchukwu</strong> to unite industrial manufacturing and natural supply chains under one roof, opening direct trade bridges between India, Nigeria, and 57 emerging global economies.
+              </p>
+            </div>
+
+            {/* Dual Co-Founders Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 relative z-10">
+              {/* Founder 1: Kumud Gameti */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 flex flex-col sm:flex-row items-center sm:items-start gap-5 shadow-xl">
+                <div className="relative w-28 h-36 sm:w-32 sm:h-40 rounded-2xl overflow-hidden border-2 border-amber-400 bg-slate-900 shrink-0 shadow-lg group">
+                  <img
+                    src="/kumud-gameti.jpg"
+                    alt="Kumud Gameti — Founder & Director"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute bottom-1.5 right-1.5 w-7 h-7 rounded-lg overflow-hidden border border-amber-400 bg-slate-950 p-0.5">
+                    <img src="/logo.jpg" alt="Logo" className="w-full h-full object-cover rounded-md" />
+                  </div>
                 </div>
 
-                <h2 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
-                  Bringing Industries Together.{' '}
-                  <span className="bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 bg-clip-text text-transparent">
-                    Opening Doors to Global Opportunities.
+                <div className="flex-1 text-center sm:text-left space-y-2">
+                  <span className="inline-block text-[10px] font-extrabold uppercase tracking-wider text-amber-300 bg-amber-400/20 px-2.5 py-0.5 rounded-full border border-amber-400/30">
+                    🇮🇳 FOUNDER & DIRECTOR &middot; INDIA HUB
                   </span>
-                </h2>
+                  <h3 className="text-xl font-black text-white">Kumud Gameti</h3>
+                  <p className="text-xs text-slate-300">
+                    Strategic Trade Leadership & Global Vision
+                  </p>
 
-                <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
-                  IndiNiger BizHub was conceived by <strong>Kumud Gameti</strong> to unite multiple business sectors under one roof, opening bilateral trade bridges between India, Niger, and 57 emerging international economies.
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                  <div className="p-4 rounded-2xl bg-white/10 border border-white/15 space-y-1">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-amber-300">FOUNDER & CONTACT</span>
-                    <span className="text-lg font-black text-white block">Kumud Gameti</span>
-                    <span className="text-xs text-slate-300">Strategic Trade Leadership & Global Vision</span>
-                  </div>
-                  <div className="p-4 rounded-2xl bg-white/10 border border-white/15 space-y-1">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-300">DIRECT WHATSAPP HELPLINE</span>
-                    <a
-                      href={`https://wa.me/${KUMUD_WHATSAPP_NUMBER}`}
-                      target="_top"
-                      rel="noopener noreferrer"
-                      className="text-lg font-black font-mono text-emerald-300 block hover:underline whitespace-nowrap"
-                    >
-                      +91 99901 55699
-                    </a>
-                    <span className="text-xs text-slate-300">Instant Direct Query & Matchmaking</span>
-                  </div>
+                  <a
+                    href={`https://wa.me/${KUMUD_WHATSAPP_NUMBER}`}
+                    target="_top"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center sm:justify-start gap-2 w-full sm:w-auto px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-all active:scale-95 mt-2"
+                  >
+                    <Phone className="w-3.5 h-3.5 shrink-0" />
+                    <span>WhatsApp India:</span>
+                    <span className="font-mono whitespace-nowrap">+91 99901 55699</span>
+                  </a>
                 </div>
               </div>
 
-              {/* Founder Kumud Gameti Portrait & Official Seal */}
-              <div className="flex flex-col items-center justify-center p-5 sm:p-6 bg-gradient-to-b from-white/15 to-white/5 backdrop-blur-md rounded-3xl border border-white/20 text-center shrink-0 self-center lg:self-auto shadow-2xl max-w-xs">
-                <div className="relative w-44 h-52 sm:w-52 sm:h-60 rounded-2xl overflow-hidden border-2 border-amber-400 shadow-2xl mb-3 group bg-slate-900">
+              {/* Founder 2: Akosa Chidozie Okwuchukwu */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 flex flex-col sm:flex-row items-center sm:items-start gap-5 shadow-xl">
+                <div className="relative w-28 h-36 sm:w-32 sm:h-40 rounded-2xl overflow-hidden border-2 border-emerald-400 bg-slate-900 shrink-0 shadow-lg group">
                   <img
-                    src="/kumud-gameti.jpg"
-                    alt="Kumud Gameti — Founder & Business Contact"
+                    src="/akosa-chidozie.jpg"
+                    alt="AKOSA CHIDOZIE OKWUCHUKWU — Co-Founder & Director"
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                   />
-                  {/* Floating official logo badge */}
-                  <div className="absolute bottom-2 right-2 w-9 h-9 rounded-xl overflow-hidden border-2 border-amber-400 bg-slate-950 p-0.5 shadow-lg">
-                    <img src="/logo.jpg" alt="IndiNiger BizHub Logo" className="w-full h-full object-cover rounded-lg" />
+                  <div className="absolute bottom-1.5 right-1.5 w-7 h-7 rounded-lg overflow-hidden border border-emerald-400 bg-slate-950 p-0.5">
+                    <img src="/logo.jpg" alt="Logo" className="w-full h-full object-cover rounded-md" />
                   </div>
                 </div>
-                <span className="font-black text-white text-base">Kumud Gameti</span>
-                <span className="text-[11px] text-amber-300 font-bold uppercase tracking-wider">Founder & Business Contact</span>
-                <span className="text-[10px] text-blue-200 mt-0.5">IndiNiger BizHub Global Secretariat</span>
+
+                <div className="flex-1 text-center sm:text-left space-y-2">
+                  <span className="inline-block text-[10px] font-extrabold uppercase tracking-wider text-emerald-300 bg-emerald-400/20 px-2.5 py-0.5 rounded-full border border-emerald-400/30">
+                    🇳🇬 CO-FOUNDER & DIRECTOR &middot; NIGERIA HUB
+                  </span>
+                  <h3 className="text-xl font-black text-white">Akosa Chidozie Okwuchukwu</h3>
+                  <p className="text-xs text-slate-300">
+                    African Trade Expansion & Operations Leadership
+                  </p>
+
+                  <a
+                    href={`https://wa.me/${AKOSA_WHATSAPP_NUMBER}`}
+                    target="_top"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center sm:justify-start gap-2 w-full sm:w-auto px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-all active:scale-95 mt-2"
+                  >
+                    <Phone className="w-3.5 h-3.5 shrink-0" />
+                    <span>WhatsApp Nigeria:</span>
+                    <span className="font-mono whitespace-nowrap">+234 916 535 5448</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -8,8 +8,8 @@
 ## 🌍 Project Overview
 
 - **Platform Name:** IndiNiger BizHub
-- **Contact Person / Founder:** Kumud Gameti
-- **Direct WhatsApp:** [+91 99901 55699](https://wa.me/919990155699)
+- **Founder & Director (India Hub):** Kumud Gameti &middot; WhatsApp: [+91 99901 55699](https://wa.me/919990155699)
+- **Co-Founder & Director (Nigeria Hub):** Akosa Chidozie Okwuchukwu &middot; Mobile/WhatsApp: [+234 916 535 5448](https://wa.me/2349165355448)
 - **Architecture:** Pure Frontend (Next.js 15 + React 19 + TypeScript + Tailwind CSS) with direct WhatsApp lead dispatch (Zero backend required).
 - **Scope:** 17 Starter Industry Sectors (expandable to 62), 57 Countries bilateral trade dossiers, global exhibitions, and verified business discovery.
 
@@ -90,9 +90,9 @@ This project is ready to deploy directly to **Vercel**, **Netlify**, or **Cloudf
 
 ---
 
-## 📞 Contact
+## 📞 Executive Contact Desks
 
 For partnerships, business listings, or trade inquiries:
-- **Contact:** Kumud Gameti
-- **WhatsApp:** [+91 99901 55699](https://wa.me/919990155699)
-- **Platform:** IndiNiger BizHub
+- **India Secretariat:** Kumud Gameti (Founder & Director) &middot; WhatsApp: [+91 99901 55699](https://wa.me/919990155699)
+- **Nigeria & West Africa Hub:** Akosa Chidozie Okwuchukwu (Co-Founder & Director) &middot; Mobile/WhatsApp: [+234 916 535 5448](https://wa.me/2349165355448)
+- **Platform:** IndiNiger BizHub — Global Business Marketplace
