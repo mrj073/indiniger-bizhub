@@ -36,10 +36,11 @@ export default function Navbar({ onOpenJoinModal }: NavbarProps) {
 
   const navLinks = [
     { label: 'Home', href: '/' },
-    { label: 'Explore Businesses', href: '/directory' },
+    { label: '100 Businesses', href: '/#100-businesses' },
+    { label: 'IndiNiger FC', href: '/#indiniger-fc' },
     { label: 'Industries', href: '/industries', hasDropdown: true },
     { label: 'Global Network', href: '/global-network' },
-    { label: 'Exhibitions & Events', href: '/events' },
+    { label: 'Events & Expos', href: '/events' },
     { label: 'About Us', href: '/about' },
     { label: 'Contact', href: '/contact' },
   ];
@@ -232,7 +233,7 @@ export default function Navbar({ onOpenJoinModal }: NavbarProps) {
                   <span className="text-amber-400">BizHub</span>
                 </span>
                 <span className="text-[10px] text-slate-300">
-                  Global Business Marketplace &middot; 57 Countries
+                  Global Business Marketplace &middot; 125+ Countries
                 </span>
               </div>
             </div>
@@ -263,7 +264,7 @@ export default function Navbar({ onOpenJoinModal }: NavbarProps) {
               >
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>🇮🇳 Kumud Gameti (India)</span>
+                  <span>🇮🇳 Kumud Ghameti (Founder &amp; CEO)</span>
                 </div>
                 <span className="font-mono text-[11px] bg-emerald-200/80 px-2 py-0.5 rounded-md whitespace-nowrap">
                   +91 99901 55699
@@ -279,7 +280,7 @@ export default function Navbar({ onOpenJoinModal }: NavbarProps) {
               >
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-teal-600 shrink-0" />
-                  <span>🇳🇬 Akosa Chidozie (Nigeria)</span>
+                  <span>🇳🇬 Akosa Chidozie Okwuchukwu</span>
                 </div>
                 <span className="font-mono text-[11px] bg-teal-200/80 px-2 py-0.5 rounded-md whitespace-nowrap">
                   +234 916 535 5448

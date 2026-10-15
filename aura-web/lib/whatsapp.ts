@@ -15,13 +15,13 @@ export const AKOSA_WHATSAPP_NUMBER = '2349165355448'; // +234 916 535 5448 (Nige
 
 export const DIRECTORS = {
   kumud: {
-    name: 'Kumud Gameti',
-    role: 'Founder & Director',
+    name: 'Kumud Ghameti',
+    role: 'Founder & CEO',
     hub: 'India & Global Secretariat',
     phoneFormatted: '+91 99901 55699',
     whatsappNumber: KUMUD_WHATSAPP_NUMBER,
     flag: '🇮🇳',
-    image: '/kumud-gameti.jpg',
+    image: '/kumud-ghameti-ceo.jpg',
   },
   akosa: {
     name: 'Akosa Chidozie Okwuchukwu',

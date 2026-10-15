@@ -64,15 +64,15 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-2">
-            {/* Founder 1: Kumud Gameti */}
+            {/* Founder 1: Kumud Ghameti */}
             <div className="rounded-3xl p-1 bg-gradient-to-br from-blue-600 via-indigo-600 to-amber-500 shadow-xl overflow-hidden flex flex-col">
               <div className="bg-gradient-to-b from-slate-900 to-slate-950 rounded-[22px] p-6 text-center space-y-4 text-white flex-1 flex flex-col justify-between">
                 <div>
                   {/* Portrait with official emblem badge */}
                   <div className="relative mx-auto w-48 h-56 sm:w-52 sm:h-60 rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-400/80 bg-slate-900 group mb-4">
                     <img
-                      src="/kumud-gameti.jpg"
-                      alt="Kumud Gameti — Founder & Director"
+                      src="/kumud-ghameti-ceo.jpg"
+                      alt="Kumud Ghameti — Founder & CEO"
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute bottom-2.5 right-2.5 w-10 h-10 rounded-xl overflow-hidden border-2 border-amber-400 bg-slate-950 p-0.5 shadow-xl">
@@ -82,17 +82,17 @@ export default function AboutPage() {
 
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 text-[11px] font-bold border border-amber-400/30 mb-2">
                     <Sparkles className="w-3 h-3 text-amber-300" />
-                    <span>FOUNDER & DIRECTOR &middot; 🇮🇳 INDIA HUB</span>
+                    <span>FOUNDER &amp; CEO &middot; 🇮🇳 INDIA HUB</span>
                   </div>
-                  <h3 className="text-2xl font-black text-white">Kumud Gameti</h3>
+                  <h3 className="text-2xl font-black text-white">Kumud Ghameti</h3>
                   <p className="text-xs text-slate-300 mt-1">
-                    Strategic Trade Leadership & Global Vision
+                    Founder &amp; CEO &middot; Strategic Bilateral Secretariat
                   </p>
                 </div>
 
                 <div className="space-y-3 pt-2">
                   <div className="p-3.5 bg-white/10 rounded-xl border border-white/10 text-xs text-blue-100 leading-relaxed text-left">
-                    Directing the strategic vision to unify 62 commercial categories and anchor India’s trade corridors across 57 countries.
+                    Directing the strategic vision to unify 100 commercial businesses and anchor India’s trade corridors across 125+ partner countries.
                   </div>
 
                   <a
@@ -163,7 +163,7 @@ export default function AboutPage() {
               One Platform Connecting Entrepreneurs, Suppliers, and Global Investors
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Together, <strong>Kumud Gameti</strong> and <strong>Akosa Chidozie Okwuchukwu</strong> established IndiNiger BizHub to eradicate friction in international commerce. By linking India’s manufacturing, pharmaceutical, technology, and engineering capabilities with the dynamic agricultural and mineral wealth of Nigeria, West Africa, and 57 emerging economies, IndiNiger BizHub offers a direct, verified highway for business growth.
+              Together, <strong>Kumud Ghameti</strong> (Founder &amp; CEO) and <strong>Akosa Chidozie Okwuchukwu</strong> (Co-Founder &amp; Director) established IndiNiger BizHub to eradicate friction in international commerce. By linking India’s manufacturing, pharmaceutical, technology, and engineering capabilities with the dynamic agricultural and mineral wealth of Nigeria, West Africa, and 125+ global partner economies, IndiNiger BizHub offers a direct, verified highway for business growth.
             </p>
             <div className="pt-2 flex flex-wrap gap-4">
               <button
@@ -194,9 +194,9 @@ export default function AboutPage() {
             <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 text-white flex items-center justify-center shadow-md">
               <Layers className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-black text-slate-900">Multi-Sector Synergy</h3>
+            <h3 className="text-lg font-black text-slate-900">100 Businesses Under One Roof</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              62 business categories operating under one cohesive digital umbrella, allowing cross-pollination between industrial suppliers and consumer distributors.
+              100 structured commercial businesses operating across 10 high-growth clusters, allowing cross-pollination between industrial suppliers, renewable energy, and consumer markets.
             </p>
           </div>
 
@@ -204,9 +204,9 @@ export default function AboutPage() {
             <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-500 text-white flex items-center justify-center shadow-md">
               <Globe className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-black text-slate-900">57-Country Vision</h3>
+            <h3 className="text-lg font-black text-slate-900">125+ Partner Countries</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Targeting bilateral trade corridors with special emphasis on bridging India and Niger with African, Middle Eastern, and international trading hubs.
+              Targeting bilateral trade corridors with special emphasis on bridging India and Nigeria with African, Middle Eastern, European, and international trading hubs.
             </p>
           </div>
 
@@ -216,7 +216,7 @@ export default function AboutPage() {
             </div>
             <h3 className="text-lg font-black text-slate-900">Direct WhatsApp Inquiries</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Zero backend delay &mdash; every business lead and partnership request immediately connects directly to Kumud Gameti on WhatsApp (+91 99901 55699).
+              Zero backend delay &mdash; every business lead and partnership request immediately connects directly to Kumud Ghameti on WhatsApp (+91 99901 55699).
             </p>
           </div>
         </div>

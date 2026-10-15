@@ -50,13 +50,13 @@ export default function Footer({ onOpenJoinModal }: FooterProps) {
           <div className="max-w-3xl space-y-4">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold uppercase tracking-wider backdrop-blur-xs">
               <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-              <span>International Business Corridor</span>
+              <span>International Business Corridor &middot; 100 Businesses</span>
             </span>
             <h3 className="text-2xl sm:text-4xl font-black tracking-tight leading-tight">
-              Ready to Connect Across 57 Global Markets & 62 Industries?
+              Ready to Connect Across 125+ Global Markets & 100 Businesses?
             </h3>
             <p className="text-sm sm:text-base text-blue-100 max-w-2xl leading-relaxed">
-              Whether you are a manufacturer, exporter, builder, or investor, join Kumud Gameti’s global business network today and unlock cross-border trade opportunities.
+              Whether you are a manufacturer, exporter, builder, or sports partner, join Kumud Ghameti’s global business network today and unlock cross-border trade opportunities.
             </p>
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <button
@@ -68,14 +68,14 @@ export default function Footer({ onOpenJoinModal }: FooterProps) {
               </button>
               <a
                 href={`https://wa.me/${KUMUD_WHATSAPP_NUMBER}?text=${encodeURIComponent(
-                  'Hello Kumud Gameti, I would like to partner with IndiNiger BizHub.'
+                  'Hello Kumud Ghameti, I would like to partner with IndiNiger BizHub.'
                 )}`}
                 target="_top"
                 rel="noopener noreferrer"
                 className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-xl text-xs font-bold flex items-center gap-2 shadow-lg transition-all"
               >
                 <Phone className="w-4 h-4" />
-                <span>Chat with Kumud Gameti on WhatsApp</span>
+                <span>Chat with Kumud Ghameti on WhatsApp</span>
               </a>
             </div>
           </div>
@@ -114,13 +114,17 @@ export default function Footer({ onOpenJoinModal }: FooterProps) {
 
             <div className="pt-2 text-xs text-slate-400 space-y-1.5">
               <div>
-                <span className="text-slate-500 font-semibold">Founder & Business Contact:</span>{' '}
-                <span className="text-white font-bold">Kumud Gameti</span>
+                <span className="text-slate-500 font-semibold">Founder &amp; CEO:</span>{' '}
+                <span className="text-white font-bold">Kumud Ghameti</span>
               </div>
               <div>
-                <span className="text-slate-500 font-semibold">Stated Vision Scope:</span>{' '}
-                <span className="text-amber-400 font-bold">62 Categories &middot; 57 Countries</span>{' '}
-                <span className="text-[10px] text-slate-500 font-normal">(Stated client vision)</span>
+                <span className="text-slate-500 font-semibold">Co-Founder &amp; Director:</span>{' '}
+                <span className="text-white font-bold">Akosa Chidozie Okwuchukwu</span>
+              </div>
+              <div>
+                <span className="text-slate-500 font-semibold">Global Footprint:</span>{' '}
+                <span className="text-amber-400 font-bold">100 Businesses &middot; 125+ Countries</span>{' '}
+                <span className="text-[10px] text-slate-500 font-normal">(India 🇮🇳 &harr; Nigeria 🇳🇬 &harr; World 🌍)</span>
               </div>
             </div>
           </div>
@@ -129,42 +133,42 @@ export default function Footer({ onOpenJoinModal }: FooterProps) {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-blue-400 mb-4 flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-blue-500" />
-              <span>Explore Industries</span>
+              <span>100 Businesses &amp; Sectors</span>
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-300">
               <li>
+                <a href="/#100-businesses" className="hover:text-blue-400 transition-colors font-bold text-amber-400">
+                  ★ 100 Businesses Directory
+                </a>
+              </li>
+              <li>
+                <a href="/#indiniger-fc" className="hover:text-blue-400 transition-colors font-bold text-emerald-400">
+                  ⚽ IndiNiger FC Sports Club
+                </a>
+              </li>
+              <li>
                 <Link href="/industries#property-real-estate" className="hover:text-blue-400 transition-colors">
-                  Property & Real Estate
+                  Property &amp; Real Estate
                 </Link>
               </li>
               <li>
                 <Link href="/industries#construction-infrastructure" className="hover:text-orange-400 transition-colors">
-                  Construction & Infrastructure
+                  Construction &amp; Infrastructure
                 </Link>
               </li>
               <li>
                 <Link href="/industries#architecture-interior-design" className="hover:text-purple-400 transition-colors">
-                  Architecture & Design
+                  Architecture &amp; Design
                 </Link>
               </li>
               <li>
                 <Link href="/industries#defence-industrial-solutions" className="hover:text-red-400 transition-colors">
-                  Defence & Security
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries#machinery-industrial-equipment" className="hover:text-blue-400 transition-colors">
-                  Machinery & Equipment
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries#fashion-apparel" className="hover:text-pink-400 transition-colors">
-                  Fashion & Apparel
+                  Defence &amp; Security
                 </Link>
               </li>
               <li>
                 <Link href="/industries" className="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 pt-1">
-                  <span>View All 17+ Industries</span>
+                  <span>View All Industries</span>
                   <ArrowRight className="w-3 h-3" />
                 </Link>
               </li>
@@ -180,7 +184,7 @@ export default function Footer({ onOpenJoinModal }: FooterProps) {
             <ul className="space-y-2.5 text-xs text-slate-300">
               <li>
                 <Link href="/global-network" className="hover:text-emerald-400 transition-colors">
-                  57-Country Directory
+                  125+ Country Directory
                 </Link>
               </li>
               <li>
@@ -190,12 +194,12 @@ export default function Footer({ onOpenJoinModal }: FooterProps) {
               </li>
               <li>
                 <Link href="/events" className="hover:text-emerald-400 transition-colors">
-                  Exhibitions & Trade Shows
+                  Exhibitions &amp; Trade Shows
                 </Link>
               </li>
               <li>
                 <Link href="/about" className="hover:text-emerald-400 transition-colors">
-                  About Kumud Gameti Vision
+                  About Kumud Ghameti Vision
                 </Link>
               </li>
               <li>
@@ -218,7 +222,7 @@ export default function Footer({ onOpenJoinModal }: FooterProps) {
             <ul className="space-y-3 text-xs text-slate-300">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                <span>Global Secretariat: New Delhi & Abuja / Niamey Corridors</span>
+                <span>Global Secretariat: New Delhi &amp; Abuja / Niamey Corridors</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
@@ -228,7 +232,7 @@ export default function Footer({ onOpenJoinModal }: FooterProps) {
                   rel="noopener noreferrer"
                   className="hover:text-emerald-400 transition-colors flex items-center gap-1.5 flex-wrap sm:flex-nowrap"
                 >
-                  <span className="font-bold text-white">🇮🇳 Kumud Gameti:</span>
+                  <span className="font-bold text-white">🇮🇳 Kumud Ghameti:</span>
                   <span className="text-emerald-400 font-bold font-mono whitespace-nowrap">+91 99901 55699</span>
                 </a>
               </li>
@@ -260,7 +264,7 @@ export default function Footer({ onOpenJoinModal }: FooterProps) {
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>
-            &copy; {new Date().getFullYear()} IndiNiger BizHub. All rights reserved. Co-Founders: Kumud Gameti &amp; Akosa Chidozie Okwuchukwu.
+            &copy; {new Date().getFullYear()} IndiNiger BizHub. All rights reserved. Co-Founders: Kumud Ghameti &amp; Akosa Chidozie Okwuchukwu.
           </p>
           <div className="flex items-center gap-6">
             <button

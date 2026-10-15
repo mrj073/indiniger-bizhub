@@ -42,6 +42,9 @@ import { useModals } from '@/components/ClientLayoutWrapper';
 import { saveEnquiry } from '@/lib/demoStorage';
 import { dispatchToWhatsApp, KUMUD_WHATSAPP_NUMBER, AKOSA_WHATSAPP_NUMBER } from '@/lib/whatsapp';
 import confetti from 'canvas-confetti';
+import Businesses100Grid from '@/components/Businesses100Grid';
+import IndiNigerFCSection from '@/components/IndiNigerFCSection';
+import WhyBizHubAndPartners from '@/components/WhyBizHubAndPartners';
 
 // Helper to render icon by name
 function CategoryIcon({ name, className = 'w-6 h-6' }: { name: string; className?: string }) {
@@ -175,40 +178,40 @@ export default function HomePage() {
                 </div>
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-amber-300 text-xs font-bold tracking-wider uppercase shadow-md">
                   <Sparkles className="w-4 h-4 text-amber-300" />
-                  <span>GLOBAL BUSINESS MARKETPLACE &middot; 57 COUNTRIES</span>
+                  <span>INDIA 🇮🇳 &harr; NIGERIA 🇳🇬 &harr; WORLD 🌍 &middot; 100 BUSINESSES &middot; 125+ COUNTRIES</span>
                 </div>
               </div>
 
               {/* Exact Requested Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-white">
-                One Global Platform.{' '}
+                One Roof.{' '}
                 <span className="bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 bg-clip-text text-transparent">
-                  Endless Business Possibilities.
+                  Every Business. Global Opportunities.
                 </span>
               </h1>
 
               {/* Supporting Text */}
               <p className="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed">
-                Discover industries, connect with businesses, explore international opportunities and grow beyond borders through IndiNiger BizHub.
+                Connecting People &middot; Connecting Businesses &middot; Connecting the World. Explore 100 verified businesses across manufacturing, trade, infrastructure, renewables, and sports diplomacy.
               </p>
 
               {/* 3 Colourful CTA Buttons */}
               <div className="flex flex-wrap items-center gap-3 pt-2">
-                {/* 1. Explore Businesses */}
-                <Link
-                  href="/directory"
+                {/* 1. Explore 100 Businesses */}
+                <a
+                  href="#100-businesses"
                   className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-6 py-3.5 rounded-2xl text-xs sm:text-sm font-extrabold flex items-center gap-2 shadow-lg shadow-blue-500/30 hover:scale-[1.02] active:scale-95 transition-all"
                 >
                   <Building2 className="w-4 h-4" />
-                  <span>Explore Businesses</span>
+                  <span>Explore 100 Businesses</span>
                   <ArrowRight className="w-4 h-4" />
-                </Link>
+                </a>
 
                 {/* 2. Join the Network */}
                 <button
                   onClick={() => openEnquiryModal({
                     title: 'Join IndiNiger Global Business Network',
-                    subtitle: 'Gain direct accreditation and multilateral trading access.',
+                    subtitle: 'Gain direct accreditation and multilateral trading access across 125+ countries.',
                     type: 'join_network',
                   })}
                   className="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 hover:from-amber-500 hover:to-orange-500 text-slate-950 px-6 py-3.5 rounded-2xl text-xs sm:text-sm font-extrabold flex items-center gap-2 shadow-lg shadow-amber-500/30 hover:scale-[1.02] active:scale-95 transition-all cursor-pointer"
@@ -217,14 +220,14 @@ export default function HomePage() {
                   <span>Join the Network</span>
                 </button>
 
-                {/* 3. Discover Global Opportunities */}
-                <Link
-                  href="/global-network"
+                {/* 3. IndiNiger FC */}
+                <a
+                  href="#indiniger-fc"
                   className="bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-md px-5 py-3.5 rounded-2xl text-xs sm:text-sm font-bold flex items-center gap-2 hover:scale-[1.02] active:scale-95 transition-all"
                 >
-                  <Globe2 className="w-4 h-4 text-cyan-300" />
-                  <span>Discover Global Opportunities</span>
-                </Link>
+                  <span className="text-base">⚽</span>
+                  <span>IndiNiger FC</span>
+                </a>
               </div>
 
               {/* Direct Bilateral WhatsApp Quick Badges */}
@@ -238,7 +241,7 @@ export default function HomePage() {
                   <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                   <span>🇮🇳 India Desk:</span>
                   <span className="font-mono font-bold text-white whitespace-nowrap">+91 99901 55699</span>
-                  <span className="text-emerald-300 hidden sm:inline">(Kumud Gameti)</span>
+                  <span className="text-emerald-300 hidden sm:inline">(Kumud Ghameti, Founder & CEO)</span>
                 </a>
 
                 <a
@@ -250,7 +253,7 @@ export default function HomePage() {
                   <Phone className="w-3.5 h-3.5 text-teal-400 shrink-0" />
                   <span>🇳🇬 Nigeria Desk:</span>
                   <span className="font-mono font-bold text-white whitespace-nowrap">+234 916 535 5448</span>
-                  <span className="text-teal-300 hidden sm:inline">(Akosa Chidozie)</span>
+                  <span className="text-teal-300 hidden sm:inline">(Akosa Chidozie Okwuchukwu)</span>
                 </a>
               </div>
 
@@ -258,15 +261,15 @@ export default function HomePage() {
               <div className="pt-4 border-t border-white/10 flex flex-wrap items-center gap-6 text-xs text-slate-300">
                 <div className="flex items-center gap-2">
                   <div className="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
-                  <span><strong className="text-white">62</strong> Stated Categories Vision</span>
+                  <span><strong className="text-white">100</strong> Numbered Businesses</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2.5 h-2.5 rounded-full bg-cyan-400"></div>
-                  <span><strong className="text-white">57</strong> Target Countries Corridor</span>
+                  <span><strong className="text-white">125+</strong> Global Partner Countries</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
-                  <span>Free Interactive Demonstration</span>
+                  <span>Direct Co-Founders WhatsApp Desks</span>
                 </div>
               </div>
             </div>
@@ -452,126 +455,9 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* SECTION E: EXPLORE BUSINESS CATEGORIES (17 DISTINCT COLOUR PALETTES) */}
+      {/* SECTION E: 100 BUSINESSES DIRECTORY (AUTHENTIC CLIENT POSTER REPLICA) */}
       {/* ============================================================ */}
-      <section className="py-20 bg-gradient-to-b from-slate-50 via-blue-50/20 to-white relative" id="categories">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold border border-blue-200">
-              <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-              <span>COLOURFUL MULTI-INDUSTRY DIRECTORY</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-              Explore Our <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-amber-500 bg-clip-text text-transparent">Business Categories</span>
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              Every industry has a distinct identity. Browse through our initial 17 high-growth sectors bridging manufacturers, builders, suppliers, and traders worldwide.
-            </p>
-
-            {/* Search Bar & Sector Filter */}
-            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-2xl mx-auto">
-              <div className="relative w-full">
-                <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
-                <input
-                  type="text"
-                  value={categorySearch}
-                  onChange={(e) => setCategorySearch(e.target.value)}
-                  placeholder="Search industries (e.g. Machinery, Fashion, Construction)..."
-                  className="w-full pl-10 pr-4 py-3 bg-white border-2 border-slate-200 rounded-2xl text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-blue-600 shadow-sm transition-all"
-                />
-              </div>
-
-              {/* Sector Filter Tabs */}
-              <select
-                value={selectedSector}
-                onChange={(e) => setSelectedSector(e.target.value)}
-                className="w-full sm:w-auto px-4 py-3 bg-white border-2 border-slate-200 rounded-2xl text-xs sm:text-sm text-slate-700 font-semibold focus:outline-none focus:border-blue-600 shadow-sm"
-              >
-                <option value="All">All Sectors (17)</option>
-                <option value="Industrial & Infrastructure">Industrial & Infrastructure</option>
-                <option value="Consumer & Lifestyle">Consumer & Lifestyle</option>
-                <option value="Global Trade & Logistics">Global Trade & Logistics</option>
-                <option value="Technology & Consulting">Technology & Consulting</option>
-              </select>
-            </div>
-          </div>
-
-          {/* 17 DISTINCT COLOURFUL INDUSTRY CARDS */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredCategories.map((cat: Category) => (
-              <div
-                key={cat.id}
-                className={`${cat.theme.cardBg} ${cat.theme.cardBorder} rounded-3xl p-7 border-2 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl flex flex-col justify-between group`}
-              >
-                <div className="space-y-4">
-                  {/* Card Header with Large Colorful Icon and Badge */}
-                  <div className="flex items-start justify-between gap-3">
-                    <div className={`w-14 h-14 rounded-2xl ${cat.theme.iconBg} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
-                      <CategoryIcon name={cat.icon} className="w-7 h-7 text-white" />
-                    </div>
-                    <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border ${cat.theme.badgeStyle}`}>
-                      {cat.sector}
-                    </span>
-                  </div>
-
-                  {/* Title & Description */}
-                  <div>
-                    <h3 className="text-xl font-extrabold text-slate-900 group-hover:text-blue-600 transition-colors">
-                      {cat.name}
-                    </h3>
-                    <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                      {cat.description}
-                    </p>
-                  </div>
-
-                  {/* Sample Offerings Pills */}
-                  <div className="space-y-2 pt-2">
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
-                      Capabilities & Products:
-                    </span>
-                    <div className="flex flex-wrap gap-1.5">
-                      {cat.sampleOfferings.map((off, oIdx) => (
-                        <span
-                          key={oIdx}
-                          className="text-[11px] px-2.5 py-1 rounded-lg bg-white/80 text-slate-700 font-medium border border-slate-200/60 shadow-xs"
-                        >
-                          {off}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Card Footer: Explore Businesses CTA */}
-                <div className="pt-6 mt-6 border-t border-slate-200/60 flex items-center justify-between">
-                  <span className="text-xs font-bold text-slate-500 font-mono">
-                    {cat.businessCount}+ Listings
-                  </span>
-                  <Link
-                    href={`/directory?industry=${encodeURIComponent(cat.name)}`}
-                    className={`${cat.theme.btnStyle} px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all shadow-md group-hover:gap-2`}
-                  >
-                    <span>Explore Businesses</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* View All Button */}
-          <div className="text-center pt-6">
-            <Link
-              href="/industries"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-amber-500 hover:from-blue-700 hover:to-amber-600 text-white font-extrabold text-sm px-8 py-4 rounded-2xl shadow-xl shadow-blue-500/25 transition-all hover:scale-105"
-            >
-              <span>View All 17+ Starter Industries</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      <Businesses100Grid />
 
       {/* ============================================================ */}
       {/* SECTION F: GLOBAL BUSINESS NETWORK (VIBRANT INDIGO & BLUE) */}
@@ -792,6 +678,11 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================ */}
+      {/* SECTION G: WHY INDINIGER BIZHUB & GLOBAL PARTNERS (7 PILLARS & 7 PARTNERS) */}
+      {/* ============================================================ */}
+      <WhyBizHubAndPartners />
+
+      {/* ============================================================ */}
       {/* SECTION H: INDUSTRIES WE SERVE (COLOURFUL VISUAL SHOWCASE) */}
       {/* ============================================================ */}
       <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
@@ -883,6 +774,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ============================================================ */}
+      {/* SECTION H2: INDINIGER FC (MY OWN FOOTBALL TEAM & SPORTS DIPLOMACY) */}
+      {/* ============================================================ */}
+      <IndiNigerFCSection />
 
       {/* ============================================================ */}
       {/* SECTION I: EXHIBITIONS & EVENTS (VIBRANT EXPO THEME) */}
@@ -1043,18 +939,18 @@ export default function HomePage() {
               </h2>
 
               <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
-                IndiNiger BizHub was established by <strong>Kumud Gameti</strong> and <strong>Akosa Chidozie Okwuchukwu</strong> to unite industrial manufacturing and natural supply chains under one roof, opening direct trade bridges between India, Nigeria, and 57 emerging global economies.
+                IndiNiger BizHub was established by <strong>Kumud Ghameti</strong> (Founder &amp; CEO) and <strong>Akosa Chidozie Okwuchukwu</strong> (Co-Founder &amp; Director) to unite industrial manufacturing and global supply chains under one roof, opening direct trade bridges between India, Nigeria, and 125+ partner economies worldwide.
               </p>
             </div>
 
             {/* Dual Co-Founders Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 relative z-10">
-              {/* Founder 1: Kumud Gameti */}
+              {/* Founder 1: Kumud Ghameti */}
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 flex flex-col sm:flex-row items-center sm:items-start gap-5 shadow-xl">
                 <div className="relative w-28 h-36 sm:w-32 sm:h-40 rounded-2xl overflow-hidden border-2 border-amber-400 bg-slate-900 shrink-0 shadow-lg group">
                   <img
-                    src="/kumud-gameti.jpg"
-                    alt="Kumud Gameti — Founder & Director"
+                    src="/kumud-ghameti-ceo.jpg"
+                    alt="Kumud Ghameti — Founder & CEO"
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute bottom-1.5 right-1.5 w-7 h-7 rounded-lg overflow-hidden border border-amber-400 bg-slate-950 p-0.5">
@@ -1064,11 +960,11 @@ export default function HomePage() {
 
                 <div className="flex-1 text-center sm:text-left space-y-2">
                   <span className="inline-block text-[10px] font-extrabold uppercase tracking-wider text-amber-300 bg-amber-400/20 px-2.5 py-0.5 rounded-full border border-amber-400/30">
-                    🇮🇳 FOUNDER & DIRECTOR &middot; INDIA HUB
+                    🇮🇳 FOUNDER &amp; CEO &middot; INDIA HUB
                   </span>
-                  <h3 className="text-xl font-black text-white">Kumud Gameti</h3>
+                  <h3 className="text-xl font-black text-white">Kumud Ghameti</h3>
                   <p className="text-xs text-slate-300">
-                    Strategic Trade Leadership & Global Vision
+                    Founder &amp; CEO &middot; Strategic Bilateral Secretariat
                   </p>
 
                   <a
@@ -1099,11 +995,11 @@ export default function HomePage() {
 
                 <div className="flex-1 text-center sm:text-left space-y-2">
                   <span className="inline-block text-[10px] font-extrabold uppercase tracking-wider text-emerald-300 bg-emerald-400/20 px-2.5 py-0.5 rounded-full border border-emerald-400/30">
-                    🇳🇬 CO-FOUNDER & DIRECTOR &middot; NIGERIA HUB
+                    🇳🇬 CO-FOUNDER &amp; DIRECTOR &middot; NIGERIA HUB
                   </span>
                   <h3 className="text-xl font-black text-white">Akosa Chidozie Okwuchukwu</h3>
                   <p className="text-xs text-slate-300">
-                    African Trade Expansion & Operations Leadership
+                    Co-Founder &amp; Director &middot; African Trade Expansion
                   </p>
 
                   <a
@@ -1135,13 +1031,13 @@ export default function HomePage() {
             Your Next Business Opportunity Starts Here.
           </h2>
           <p className="text-sm sm:text-base text-blue-100 max-w-2xl mx-auto leading-relaxed">
-            Whether you are a manufacturer, supplier, entrepreneur, service provider or business professional, discover new possibilities through IndiNiger BizHub.
+            Whether you are a manufacturer, supplier, entrepreneur, service provider or sports professional, discover new possibilities through IndiNiger BizHub.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <button
               onClick={() => openEnquiryModal({
                 title: 'Join the Global Business Network',
-                subtitle: 'Register your company profile across 57 international markets.',
+                subtitle: 'Register your company profile across 125+ international markets.',
                 type: 'join_network',
               })}
               className="bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold px-8 py-4 rounded-2xl text-sm shadow-xl shadow-amber-500/25 transition-all hover:scale-105 cursor-pointer"
@@ -1150,7 +1046,7 @@ export default function HomePage() {
             </button>
             <a
               href={`https://wa.me/${KUMUD_WHATSAPP_NUMBER}?text=${encodeURIComponent(
-                'Hello Kumud Gameti, I would like to submit a business enquiry regarding IndiNiger BizHub.'
+                'Hello Kumud Ghameti, I would like to submit a business enquiry regarding IndiNiger BizHub.'
               )}`}
               target="_top"
               rel="noopener noreferrer"
@@ -1174,7 +1070,7 @@ export default function HomePage() {
               <div className="flex items-center justify-between">
                 <div>
                   <span className="text-xs font-bold uppercase tracking-wider text-emerald-600">DIRECT SECRETARIAT</span>
-                  <h3 className="text-2xl font-black text-slate-900 mt-1">Connect with Kumud Gameti</h3>
+                  <h3 className="text-2xl font-black text-slate-900 mt-1">Connect with Kumud Ghameti</h3>
                   <p className="text-xs text-slate-600 mt-1">
                     Pure front-end submission &mdash; your complete query opens instantly in WhatsApp.
                   </p>
@@ -1199,7 +1095,7 @@ export default function HomePage() {
                     >
                       +91 99901 55699
                     </a>
-                    <span className="text-[11px] text-emerald-700 font-semibold">Kumud Gameti (Founder / Secretariat)</span>
+                    <span className="text-[11px] text-emerald-700 font-semibold">Kumud Ghameti (Founder &amp; CEO / Secretariat)</span>
                   </div>
                 </div>
 
@@ -1209,8 +1105,8 @@ export default function HomePage() {
                   </div>
                   <div>
                     <span className="text-[11px] font-bold text-blue-800 uppercase block">GLOBAL CORRIDORS</span>
-                    <span className="font-bold text-sm text-slate-900 block">India &middot; Niger &middot; 57 Countries</span>
-                    <span className="text-[11px] text-blue-700">New Delhi & Niamey Hub Corridors</span>
+                    <span className="font-bold text-sm text-slate-900 block">India &middot; Nigeria &middot; 125+ Countries</span>
+                    <span className="text-[11px] text-blue-700">New Delhi &amp; Abuja / Niamey Hub Corridors</span>
                   </div>
                 </div>
               </div>
@@ -1218,7 +1114,7 @@ export default function HomePage() {
               <div className="p-4 bg-amber-50 rounded-2xl border border-amber-200 text-xs text-amber-900 space-y-1">
                 <span className="font-bold block">&#9432; Instant WhatsApp Forwarding:</span>
                 <p className="text-[11px] leading-relaxed">
-                  Upon submitting this form, your complete structured enquiry is immediately loaded into WhatsApp ready to send to Kumud Gameti with zero delays.
+                  Upon submitting this form, your complete structured enquiry is immediately loaded into WhatsApp ready to send to Kumud Ghameti with zero delays.
                 </p>
               </div>
             </div>
@@ -1232,7 +1128,7 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900">Landing Your Query on WhatsApp!</h3>
                   <p className="text-xs text-slate-600 max-w-md mx-auto">
-                    Your enquiry details have been pre-formatted and routed directly to <strong>Kumud Gameti (+91 99901 55699)</strong>.
+                    Your enquiry details have been pre-formatted and routed directly to <strong>Kumud Ghameti (+91 99901 55699)</strong>.
                   </p>
 
                   <div className="p-4 bg-emerald-50 border border-emerald-300 rounded-2xl text-xs text-left space-y-2 max-w-md mx-auto">
@@ -1284,7 +1180,7 @@ export default function HomePage() {
                   <div className="mb-4">
                     <h3 className="text-xl font-bold text-slate-900">Submit Business Enquiry</h3>
                     <p className="text-xs text-slate-500">
-                      Fill out the details below to contact Kumud Gameti directly on WhatsApp.
+                      Fill out the details below to contact Kumud Ghameti directly on WhatsApp.
                     </p>
                   </div>
 
